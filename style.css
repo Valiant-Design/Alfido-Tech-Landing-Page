@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    background-image: url("sebastian-svenson-LpbyDENbQQg-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgb(79, 157, 190);
+    color: #fff;
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+
+header .navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0 0.5rem;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 05px;
+}
+
+header .navbar a:hover, .active {
+    background: rgb(0, 82, 117);
+    transition: 0.4s ease-in-out;
+}
+
+header .navbar a:hover {
+    background: rgb(0, 82, 117);
+    transition: 0.6s ease-in-out;
+}
+
+header .btn{
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content h2{
+    color: #fff;
+    font-size: 8rem;
+    text-align: center;
+    letter-spacing: 0.9rem;
+}
+
+.content P{
+    color: rgb(0, 82, 117);
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media(max-width:990px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+}
+
+@media(max-width:768px) {
+    header .btn {
+        display: block;
+    }
+
+    header .navbar {
+        position: fixed;
+        flex-direction: column;
+        min-width: 300px;
+        height: 100vh; 
+        background: rgb(79, 157, 190);
+        top: 0;
+        right: -100%;
+        align-items: flex-start;
+        justify-content: start;
+        padding-top: 10rem;
+        transition: 0.7s;
+    }
+
+    header .navbar.active {
+        right: 0;
+        transition: 0.9s;
+    }
+
+    header .navbar .ri-close-fill {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 25px;
+    }
+
+    header .navbar a {
+        display: block;
+        font-size: 1.9rem;
+        margin: 0.5rem 15px;
+    }
+
+    header .navbar a:hover, .active {
+        background: rgb(0, 82, 117);
+        color: #fff;
+        transition: 0.6s ease;
+    }
+ 
+    header .logo {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .content h2 {
+        font-size: 6rem;
+        /* padding: 2rem; */
+        letter-spacing: 0.9rem;
+        text-align: center;
+    }
+
+    .content P{
+        color: rgb(0, 82, 117);
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
